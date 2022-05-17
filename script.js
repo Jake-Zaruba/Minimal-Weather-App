@@ -31,26 +31,48 @@ let weatherBackground = document.querySelector(`.element-container`);
 let foregroundHill = document.getElementById(`hill-foreground-fill`);
 let middleHill = document.getElementById(`hill-middle-fill`);
 let backgroundHill = document.getElementById(`hill-background-fill`);
-let cloud = document.getElementById(`cloud`);
+let fog = document.getElementById(`fog`);
+let moon = document.getElementById(`moon`);
+let moonGlow = document.getElementById(`moon-glow`);
+let sun = document.getElementById(`sun`);
+let sunGlow = document.getElementById(`sun-glow`);
+let sunset = document.getElementById(`sunset`);
+let sunsetGlow = document.getElementById(`sunset-glow`);
+let cloudGlow = document.getElementById(`cloud-glow`);
 let city = document.querySelector(`.city`);
 let displayDate = document.querySelectorAll(`.date`);
 let d = new Date();
 console.log(d);
 const time = d.getHours();
+// const time = 20;
+// const time = 10;
 console.log(time);
 
 if (time > 19 || time < 6) {
-  weatherBackground.style.background = `linear-gradient(to bottom, #116687, #0D4666)`;
-  foregroundHill.style.fill = `#407085`;
-  middleHill.style.fill = `#799baa`;
-  backgroundHill.style.fill = `#8ca9b6`;
-  cloud.style.display = `none`;
+  weatherBackground.style.background = `linear-gradient(to bottom, #116687, rgba(13, 69, 102, 0))`;
+  foregroundHill.style.fill = `#518689`;
+  middleHill.style.fill = `#63AEB2`;
+  backgroundHill.style.fill = `#7BBBBF`;
+  sun.style.display = `none`;
+  sunGlow.style.display = `none`;
+  cloudGlow.style.display = `block`;
+  moon.style.display = `block`;
+  moonGlow.style.display = `block`;
+  fog.style.display = `block`;
   city.style.color = `white`;
   displayDate.forEach((entries) => {
     entries.style.color = `white`;
   });
 } else if (time === 6 || time === 18) {
   weatherBackground.style.background = `linear-gradient(to bottom, #f7e5a5, #fff8d2)`;
+  sun.style.display = `none`;
+  sunGlow.style.display = `none`;
+  sunset.style.display = `block`;
+  sunsetGlow.style.display = `block`;
+  cloudGlow.style.display = `block`;
+  foregroundHill.style.fill = `#CDE088`;
+  middleHill.style.fill = `#DBEAA1`;
+  backgroundHill.style.fill = `#EBF4AF`;
 } else {
   weatherBackground.style.background = `#fff8d2`;
 }

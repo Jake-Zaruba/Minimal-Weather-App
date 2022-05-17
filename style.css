@@ -105,6 +105,7 @@ body {
   grid-row: 1;
   justify-self: flex-end;
   margin: 4rem 4rem 0 0;
+  color: rgba(13, 69, 102, 0);
 }
 
 #sun-glow {
@@ -114,11 +115,53 @@ body {
   /* margin: 2rem 2rem 0 0; */
 }
 
+#sunset {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-end;
+  margin: 4rem 4rem 0 0;
+  color: rgba(13, 69, 102, 0);
+  display: none;
+}
+
+#sunset-glow {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-end;
+  margin: 2rem 2rem 0 0;
+  color: rgba(13, 69, 102, 0);
+  display: none;
+}
+
+#moon {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-end;
+  margin: 4rem 4rem 0 0;
+  display: none;
+}
+
+#moon-glow {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-end;
+  margin-right: 0.4rem;
+  display: none;
+}
+
 #cloud {
   grid-column: 1;
   grid-row: 1;
   justify-self: flex-start;
   margin: 4.2rem 0 0 4rem;
+}
+
+#cloud-glow {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-start;
+  margin: 2rem 0 0 2rem;
+  display: none;
 }
 
 #hill-foreground {
@@ -144,6 +187,14 @@ body {
   z-index: 1;
   justify-self: center;
   margin-top: 5rem;
+}
+
+#fog {
+  grid-column: 1;
+  grid-row: 4 / span 5;
+  z-index: 4;
+  justify-self: center;
+  display: none;
 }
 
 #main-temp-box {
