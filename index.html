@@ -14,44 +14,88 @@
     <title>Document</title>
   </head>
   <body>
-    <div class="app-container"></div>
-    <div class="element-container">
-      <img id="sun" src="/img/sun.svg" />
-      <img id="sun-glow" src="/img/sun-glow.svg" />
-      <img id="hill-foreground" src="/img/hill-front.svg" />
-      <img id="hill-middle" src="/img/hill-middle.svg" />
-      <img id="hill-background" src="/img/hill-background.svg" />
-      <h1 class="main-temp">&nbsp;67&deg;</h1>
-      <img id="main-temp-box" src="/img/main-temp-box.svg" />
-      <img id="forecast-box" src="/img/forecast-box.svg" />
-      <h2 class="city">OMRO</h2>
-      <div class="date-container">
-        <h3 class="date">MONDAY</h3>
-        <div class="date date-line">&nbsp;|&nbsp;</div>
-        <div class="date">MAY 14th</div>
-      </div>
-      <div class="forecast-container">
-        <div class="forecast-current">
-          <h2 class="forecast-time">1pm</h2>
-          <h2 class="forecast-temp">&nbsp;67&deg;</h2>
-          <img class="forecast-icon" src="/img/sun.svg" />
+    <div class="app-container">
+      <div class="element-container">
+        <img id="sun" src="/img/sun.svg" />
+        <img id="sun-glow" src="/img/sun-glow.svg" />
+        <img id="cloud" src="/img/cloud.svg" />
+        <svg
+          id="hill-foreground"
+          width="390"
+          height="273"
+          viewBox="0 0 390 273"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="hill-foreground-fill"
+            d="M197.5 10.5C126.7 -16.3 35 16.6667 -2 36.5L-24 294.5H394.5C453.333 221.167 548.5 81.2 458.5 108C379.921 131.399 326.955 90.8862 272 52.9123C248.277 36.52 224.184 20.6008 197.5 10.5Z"
+            fill="#CDE097"
+          />
+        </svg>
+        <svg
+          id="hill-middle"
+          width="125"
+          height="150"
+          viewBox="0 0 125 150"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="hill-middle-fill"
+            d="M264 16C149.2 -18.8 40.5 14.1667 0.5 35L39 150C161.833 119.833 378.8 50.8 264 16Z"
+            fill="#DBEAB0"
+          />
+        </svg>
+
+        <svg
+          id="hill-background"
+          width="390"
+          height="352"
+          viewBox="0 0 390 352"
+          fill="none"
+          xmlns="http://www.w3.org/2000/svg"
+        >
+          <path
+            id="hill-background-fill"
+            d="M-91.9272 417.482L547.932 434C624.391 109.411 356.121 -29.0552 -16.0425 5.03929C-196.345 21.557 -91.9272 417.482 -91.9272 417.482Z"
+            fill="#EBF4CF"
+          />
+        </svg>
+
+        <h1 class="main-temp">&nbsp;67&deg;</h1>
+        <img id="main-temp-box" src="/img/main-temp-box.svg" />
+        <img id="forecast-box" src="/img/forecast-box.svg" />
+        <h2 class="city">OMRO</h2>
+        <div class="date-container">
+          <h3 class="date">MONDAY</h3>
+          <div class="date date-line">&nbsp;|&nbsp;</div>
+          <div class="date">MAY 14th</div>
         </div>
-        <div class="forecast-1hr">
-          <h2 class="forecast-time">1pm</h2>
-          <h2 class="forecast-temp">&nbsp;67&deg;</h2>
-          <img class="forecast-icon" src="/img/sun.svg" />
-        </div>
-        <div class="forecast-2hr">
-          <h2 class="forecast-time">1pm</h2>
-          <h2 class="forecast-temp">&nbsp;67&deg;</h2>
-          <img class="forecast-icon" src="/img/partly-cloudy.svg" />
-        </div>
-        <div class="forecast-3hr">
-          <h2 class="forecast-time">1pm</h2>
-          <h2 class="forecast-temp">&nbsp;67&deg;</h2>
-          <img class="forecast-icon" src="/img/clouds.svg" />
+        <div class="forecast-container">
+          <div class="forecast-current">
+            <h2 class="forecast-time">1pm</h2>
+            <h2 class="forecast-temp">&nbsp;67&deg;</h2>
+            <img class="forecast-icon" src="/img/sun.svg" />
+          </div>
+          <div class="forecast-1hr">
+            <h2 class="forecast-time">1pm</h2>
+            <h2 class="forecast-temp">&nbsp;67&deg;</h2>
+            <img class="forecast-icon" src="/img/sun.svg" />
+          </div>
+          <div class="forecast-2hr">
+            <h2 class="forecast-time">1pm</h2>
+            <h2 class="forecast-temp">&nbsp;67&deg;</h2>
+            <img class="forecast-icon" src="/img/partly-cloudy.svg" />
+          </div>
+          <div class="forecast-3hr">
+            <h2 class="forecast-time">1pm</h2>
+            <h2 class="forecast-temp">&nbsp;67&deg;</h2>
+            <img class="forecast-icon" src="/img/clouds.svg" />
+          </div>
         </div>
       </div>
     </div>
+    <script src="/script.js"></script>
   </body>
 </html>

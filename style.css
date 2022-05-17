@@ -12,26 +12,32 @@ html {
 body {
   font-family: "Inter", sans-serif;
   color: white;
-  background: #fff8d2;
+  background: rgb(227, 226, 226);
   /* max-width: 39rem; */
 }
 
 .app-container {
   display: grid;
+  justify-items: center;
   /* align-items: center; */
 }
 
 .element-container {
+  /* background: linear-gradient(to bottom, #f7e5a5, #fff8d2); */
+  /* background: #116687; */
+  /* background: #d2f2ff; */
+  background: #fff8d2;
   max-width: 39rem;
   display: grid;
+  /* margin-top: 0.6rem; */
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 0.5fr 0.5fr 0.5fr 0.5fr;
 }
 
 .forecast-container {
   display: flex;
-  gap: 2rem;
-  margin-top: 4rem;
+  gap: 2.6rem;
+  margin-top: 3rem;
   justify-self: center;
   grid-column: 1;
   grid-row: 3 / span 4;
@@ -45,6 +51,7 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
+  gap: 0.6rem;
 }
 
 .forecast-icon {
@@ -69,6 +76,7 @@ body {
   z-index: 2;
   justify-self: center;
   align-self: center;
+  cursor: pointer;
 }
 
 .city {
@@ -106,6 +114,13 @@ body {
   /* margin: 2rem 2rem 0 0; */
 }
 
+#cloud {
+  grid-column: 1;
+  grid-row: 1;
+  justify-self: flex-start;
+  margin: 4.2rem 0 0 4rem;
+}
+
 #hill-foreground {
   grid-column: 1;
   grid-row: 4 / span 5;
@@ -119,8 +134,8 @@ body {
   z-index: 2;
   justify-self: flex-end;
   overflow: hidden;
-  margin: 1rem 0 0 25rem;
-  padding: 2rem 0 0 30rem;
+  padding: 2rem 0.6rem 0 0;
+  transform: scale(1.11);
 }
 
 #hill-background {
@@ -137,6 +152,7 @@ body {
   z-index: 1;
   justify-self: center;
   align-self: center;
+  backdrop-filter: blur(0.4rem);
   /* background-filter: blur(10rem); */
 }
 
@@ -146,4 +162,5 @@ body {
   grid-row: 3 / span 4;
   z-index: 1;
   margin-top: 2rem;
+  backdrop-filter: blur(0.4rem);
 }
