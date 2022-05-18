@@ -3,18 +3,61 @@
 //////////////////////////////////////////////////////////////
 //WEATHER API///////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
+// let currentCity = document.querySelector(`.city`);
+// window.addEventListener(`load`, () => {
+//   let lon;
+//   let lat;
+//   let currentTemp = document.querySelector(`.main-temp`);
+
+//   if (navigator.geolocation) {
+//     navigator.geolocation.getCurrentPosition((position) => {
+//       lon = position.coords.longitude;
+//       lat = position.coords.latitude;
+
+//       const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=1b82c02641bb16a6d993fd26b9eb7e7f&units=imperial`;
+
+//       fetch(api)
+//         .then((response) => {
+//           return response.json();
+//         })
+//         .then((data) => {
+//           console.log(data);
+//           const { temp } = data.main;
+//           const cityName = data.name;
+//           currentTemp.innerHTML = `&nbsp;` + Math.round(temp) + `&deg;`;
+//           currentCity.innerHTML = cityName.toUpperCase();
+//         });
+//     });
+//   } else {
+//     document.querySelector(`.city`).textContent = `Location Off`;
+//   }
+// });
+
+let d = new Date();
+console.log(d);
+const time = d.getHours();
 let currentCity = document.querySelector(`.city`);
+let currentTemp = document.querySelector(`.main-temp`);
+/////FORCAST TEMPS/////
+let now = document.getElementById(`now`);
+let hr1 = document.getElementById(`hr1`);
+let hr2 = document.getElementById(`hr2`);
+let hr3 = document.getElementById(`hr3`);
+/////FORECAST HOURS/////
+let forecastHrNowEl = document.getElementById(`forecast-hr-now`);
+let forecastHr1El = document.getElementById(`forecast-hr-1`);
+let forecastHr2El = document.getElementById(`forecast-hr-2`);
+let forecastHr3El = document.getElementById(`forecast-hr-3`);
 window.addEventListener(`load`, () => {
   let lon;
   let lat;
-  let currentTemp = document.querySelector(`.main-temp`);
 
   if (navigator.geolocation) {
     navigator.geolocation.getCurrentPosition((position) => {
       lon = position.coords.longitude;
       lat = position.coords.latitude;
 
-      const api = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=1b82c02641bb16a6d993fd26b9eb7e7f&units=imperial`;
+      const api = `https://api.openweathermap.org/data/2.5/forecast?lat=${lat}&lon=${lon}&appid=1b82c02641bb16a6d993fd26b9eb7e7f&units=imperial`;
 
       fetch(api)
         .then((response) => {
@@ -22,10 +65,82 @@ window.addEventListener(`load`, () => {
         })
         .then((data) => {
           console.log(data);
-          const { temp } = data.main;
-          const cityName = data.name;
-          currentTemp.innerHTML = `&nbsp;` + Math.round(temp) + `&deg;`;
+          let temperature = data.list[0].main.temp;
+          let cityName = data.city.name;
+          let forecastTime = d.getHours();
+          /////MAIN DISPLAY/////
+          currentTemp.innerHTML = `&nbsp;` + Math.round(temperature) + `&deg;`;
           currentCity.innerHTML = cityName.toUpperCase();
+          /////FORECAST TEMPS/////
+          let nowTemp = data.list[0].main.temp;
+          let hr1Temp = data.list[1].main.temp;
+          let hr2Temp = data.list[2].main.temp;
+          let hr3Temp = data.list[3].main.temp;
+          now.innerHTML = `&nbsp;` + Math.round(nowTemp) + `&deg;`;
+          hr1.innerHTML = `&nbsp;` + Math.round(hr1Temp) + `&deg;`;
+          hr2.innerHTML = `&nbsp;` + Math.round(hr2Temp) + `&deg;`;
+          hr3.innerHTML = `&nbsp;` + Math.round(hr3Temp) + `&deg;`;
+          /////FORECAST HOURS/////
+          let forecastHr1 = forecastTime + 1;
+          console.log(forecastHr1);
+          let forecastHr2 = forecastTime + 2;
+          let forecastHr3 = forecastTime + 3;
+          const formatTime = function (hour) {
+            if (hour === 0) {
+              return `12am`;
+            } else if (hour === 1) {
+              return `1am`;
+            } else if (hour === 2) {
+              return `2am`;
+            } else if (hour === 3) {
+              return `3am`;
+            } else if (hour === 4) {
+              return `4am`;
+            } else if (hour === 5) {
+              return `5am`;
+            } else if (hour === 6) {
+              return `6am`;
+            } else if (hour === 7) {
+              return `7am`;
+            } else if (hour === 8) {
+              return `8am`;
+            } else if (hour === 9) {
+              return `9am`;
+            } else if (hour === 10) {
+              return `10am`;
+            } else if (hour === 11) {
+              return `11am`;
+            } else if (hour === 12) {
+              return `12pm`;
+            } else if (hour === 13) {
+              return `1pm`;
+            } else if (hour === 14) {
+              return `2pm`;
+            } else if (hour === 15) {
+              return `3pm`;
+            } else if (hour === 16) {
+              return `4pm`;
+            } else if (hour === 17) {
+              return `5pm`;
+            } else if (hour === 18) {
+              return `6pm`;
+            } else if (hour === 19) {
+              return `7pm`;
+            } else if (hour === 20) {
+              return `8pm`;
+            } else if (hour === 21) {
+              return `9pm`;
+            } else if (hour === 22) {
+              return `10pm`;
+            } else if (hour === 23) {
+              return `11pm`;
+            } else {
+              return `0`;
+            }
+          };
+          forecastHr1El.innerHTML = formatTime(forecastHr1);
+          forecastHr2El.innerHTML = formatTime(forecastHr2);
+          forecastHr3El.innerHTML = formatTime(forecastHr3);
         });
     });
   } else {
@@ -47,9 +162,7 @@ let sunsetGlow = document.getElementById(`sunset-glow`);
 let cloudGlow = document.getElementById(`cloud-glow`);
 // let city = document.querySelector(`.city`);
 let displayDate = document.querySelectorAll(`.date`);
-let d = new Date();
-console.log(d);
-const time = d.getHours();
+
 // console.log(time);
 
 //////////////////////////////////////////////////////////////
@@ -189,3 +302,78 @@ if (time > 19 || time < 6) {
 } else {
   weatherBackground.style.background = `#fff8d2`;
 }
+
+// switch (currentHour) {
+//   case 0:
+//     currentHour = `1am`;
+//     break;
+//   case 1:
+//     currentHour = `2am`;
+//     break;
+//   case 2:
+//     currentHour = `3am`;
+//     break;
+//   case 3:
+//     currentHour = `4am`;
+//     break;
+//   case 4:
+//     currentHour = `5am`;
+//     break;
+//   case 5:
+//     currentHour = `6am`;
+//     break;
+//   case 6:
+//     currentHour = `7am`;
+//     break;
+//   case 7:
+//     currentHour = `8am`;
+//     break;
+//   case 8:
+//     currentHour = `9am`;
+//     break;
+//   case 9:
+//     currentHour = `10am`;
+//     break;
+//   case 10:
+//     currentHour = `11am`;
+//     break;
+//   case 11:
+//     currentHour = `12pm`;
+//     break;
+//   case 12:
+//     currentHour = `1pm`;
+//     break;
+//   case 13:
+//     currentHour = `2pm`;
+//     break;
+//   case 14:
+//     currentHour = `3pm`;
+//     break;
+//   case 15:
+//     currentHour = `4pm`;
+//     break;
+//   case 16:
+//     currentHour = `5pm`;
+//     break;
+//   case 17:
+//     currentHour = `6pm`;
+//     break;
+//   case 18:
+//     currentHour = `7pm`;
+//     break;
+//   case 19:
+//     currentHour = `8pm`;
+//     break;
+//   case 20:
+//     currentHour = `9pm`;
+//     break;
+//   case 21:
+//     currentHour = `10pm`;
+//     break;
+//   case 22:
+//     currentHour = `11pm`;
+//     break;
+//   case 23:
+//     currentHour = `12am`;
+//     break;
+// }
