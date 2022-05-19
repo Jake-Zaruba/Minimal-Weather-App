@@ -238,6 +238,7 @@ body {
   z-index: 1;
   justify-self: center;
   align-self: center;
+  opacity: 0.4;
   backdrop-filter: blur(0.4rem);
 }
 
