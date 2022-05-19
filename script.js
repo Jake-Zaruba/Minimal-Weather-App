@@ -200,7 +200,7 @@ window.addEventListener(`load`, () => {
           const formatTime = function (hour) {
             if (hour === 25) {
               return `1am`;
-            } else if (hour === 2) {
+            } else if (hour === 26) {
               return `2am`;
             } else if (hour === 3) {
               return `3am`;
