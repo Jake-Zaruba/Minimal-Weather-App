@@ -76,21 +76,29 @@ body {
 #hr0-rain,
 #hr0-snow,
 #hr0-partly-cloudy,
+#hr0-thunderstorm,
+#hr0-thunderstorm-with-rain,
 #hr1-sunny,
 #hr1-cloudy,
 #hr1-rain,
 #hr1-snow,
 #hr1-partly-cloudy,
+#hr1-thunderstorm,
+#hr1-thunderstorm-with-rain,
 #hr2-sunny,
 #hr2-cloudy,
 #hr2-rain,
 #hr2-snow,
 #hr2-partly-cloudy,
+#hr2-thunderstorm,
+#hr2-thunderstorm-with-rain,
 #hr3-sunny,
 #hr3-cloudy,
 #hr3-rain,
 #hr3-snow,
-#hr3-partly-cloudy {
+#hr3-partly-cloudy,
+#hr3-thunderstorm,
+#hr3-thunderstorm-with-rain {
   display: none;
 }
 
