@@ -233,21 +233,29 @@ body {
 }
 
 #main-temp-box {
+  height: 99px;
+  width: 212px;
+  background-color: rgba(83, 223, 255, 0.4);
+  border-radius: 2.5rem;
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.4rem);
   grid-column: 1;
   grid-row: 1;
   z-index: 1;
   justify-self: center;
   align-self: center;
-  opacity: 0.4;
-  backdrop-filter: blur(0.4rem);
 }
 
 #forecast-box {
-  justify-self: center;
+  height: 169px;
+  width: 312px;
+  background-color: rgba(83, 223, 255, 0.4);
+  border-radius: 2.5rem;
+  border: solid 1px rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(0.4rem);
   grid-column: 1;
   grid-row: 3 / span 4;
   z-index: 1;
   margin-top: 2rem;
-  opacity: 0.4;
-  backdrop-filter: blur(0.4rem);
+  justify-self: center;
 }
