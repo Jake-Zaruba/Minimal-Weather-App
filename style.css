@@ -248,5 +248,6 @@ body {
   grid-row: 3 / span 4;
   z-index: 1;
   margin-top: 2rem;
+  opacity: 0.4;
   backdrop-filter: blur(0.4rem);
 }

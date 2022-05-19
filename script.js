@@ -198,7 +198,7 @@ window.addEventListener(`load`, () => {
           let forecastHr2 = forecastTime + 2;
           let forecastHr3 = forecastTime + 3;
           const formatTime = function (hour) {
-            if (hour === 1) {
+            if (hour === 25) {
               return `1am`;
             } else if (hour === 2) {
               return `2am`;
