@@ -235,7 +235,7 @@ body {
 #main-temp-box {
   grid-column: 1;
   grid-row: 1;
-  z-index: 1;
+  z-index: 999;
   justify-self: center;
   align-self: center;
   backdrop-filter: blur(0.4rem);
@@ -245,7 +245,7 @@ body {
   justify-self: center;
   grid-column: 1;
   grid-row: 3 / span 4;
-  z-index: 1;
+  z-index: 999;
   margin-top: 2rem;
   backdrop-filter: blur(0.4rem);
 }
