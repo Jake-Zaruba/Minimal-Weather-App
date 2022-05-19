@@ -198,9 +198,7 @@ window.addEventListener(`load`, () => {
           let forecastHr2 = forecastTime + 2;
           let forecastHr3 = forecastTime + 3;
           const formatTime = function (hour) {
-            if (hour === 0) {
-              return `12am`;
-            } else if (hour === 1) {
+            if (hour === 1) {
               return `1am`;
             } else if (hour === 2) {
               return `2am`;
@@ -246,6 +244,8 @@ window.addEventListener(`load`, () => {
               return `10pm`;
             } else if (hour === 23) {
               return `11pm`;
+            } else if (hour === 24) {
+              return `12am`;
             } else {
               return `0`;
             }
@@ -253,6 +253,7 @@ window.addEventListener(`load`, () => {
           forecastHr1El.innerHTML = formatTime(forecastHr1);
           forecastHr2El.innerHTML = formatTime(forecastHr2);
           forecastHr3El.innerHTML = formatTime(forecastHr3);
+          console.log(forecastHr3);
         });
     });
   } else {
