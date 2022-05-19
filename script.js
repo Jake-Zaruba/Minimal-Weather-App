@@ -80,59 +80,61 @@ window.addEventListener(`load`, () => {
           hr1.innerHTML = `&nbsp;` + Math.round(hr1Temp) + `&deg;`;
           hr2.innerHTML = `&nbsp;` + Math.round(hr2Temp) + `&deg;`;
           hr3.innerHTML = `&nbsp;` + Math.round(hr3Temp) + `&deg;`;
+          console.log(data.list[29].weather[0].main);
           ////////////////////////
           /////FORECAST ICONS/////
           ////////////////////////
 
           /////CURRENT HOUR/////
           if (
-            (data.list[0].weather[0].main = `Clouds`) &&
-            (data.list[0].weather[0].description = `overcast clouds`)
+            data.list[29].weather[0].main === `Clouds` &&
+            data.list[29].weather[0].description === `overcast clouds`
           ) {
             document.getElementById(`hr0-cloudy`).style.display = `block`;
-          } else if ((data.list[0].weather[0].main = `Clear`)) {
+          } else if (data.list[29].weather[0].main === `Clear`) {
             document.getElementById(`hr0-sunny`).style.display = `block`;
-          } else if ((data.list[0].weather[0].main = `Snow`)) {
+          } else if (data.list[29].weather[0].main === `Snow`) {
             document.getElementById(`hr0-snow`).style.display = `block`;
-          } else if ((data.list[0].weather[0].main = `Rain`)) {
+          } else if (data.list[29].weather[0].main === `Rain`) {
             document.getElementById(`hr0-rain`).style.display = `block`;
-          } else if ((data.list[0].weather[0].description = `few clouds`)) {
+          } else if (data.list[29].weather[0].description === `few clouds`) {
             document.getElementById(
               `hr0-partly-cloudy`
             ).style.display = `block`;
-          } else if ((data.list[0].weather[0].description = `broken clouds`)) {
+          } else if (data.list[29].weather[0].description === `broken clouds`) {
             document.getElementById(
               `hr0-partly-cloudy`
             ).style.display = `block`;
           } else if (
-            (data.list[0].weather[0].description = `scattered clouds`)
+            data.list[29].weather[0].description === `scattered clouds`
           ) {
             document.getElementById(
               `hr0-partly-cloudy`
             ).style.display = `block`;
           }
+          console.log(data.list[29].weather[0].main);
           /////1 HOUR/////
           if (
-            (data.list[1].weather[0].main = `Clouds`) &&
-            (data.list[1].weather[0].description = `overcast clouds`)
+            data.list[1].weather[0].main === `Clouds` &&
+            data.list[1].weather[0].description === `overcast clouds`
           ) {
             document.getElementById(`hr1-cloudy`).style.display = `block`;
-          } else if ((data.list[1].weather[0].main = `Clear`)) {
+          } else if (data.list[10].weather[0].main === `Clear`) {
             document.getElementById(`hr1-sunny`).style.display = `block`;
-          } else if ((data.list[1].weather[0].main = `Snow`)) {
+          } else if (data.list[10].weather[0].main === `Snow`) {
             document.getElementById(`hr1-snow`).style.display = `block`;
-          } else if ((data.list[1].weather[0].main = `Rain`)) {
+          } else if (data.list[10].weather[0].main === `Rain`) {
             document.getElementById(`hr1-rain`).style.display = `block`;
-          } else if ((data.list[1].weather[0].description = `few clouds`)) {
+          } else if (data.list[10].weather[0].description === `few clouds`) {
             document.getElementById(
               `hr1-partly-cloudy`
             ).style.display = `block`;
-          } else if ((data.list[1].weather[0].description = `broken clouds`)) {
+          } else if (data.list[10].weather[0].description === `broken clouds`) {
             document.getElementById(
               `hr1-partly-cloudy`
             ).style.display = `block`;
           } else if (
-            (data.list[1].weather[0].description = `scattered clouds`)
+            data.list[10].weather[0].description === `scattered clouds`
           ) {
             document.getElementById(
               `hr1-partly-cloudy`
@@ -140,53 +142,57 @@ window.addEventListener(`load`, () => {
           }
           /////2 HOUR/////
           if (
-            (data.list[2].weather[0].main = `Clouds`) &&
-            (data.list[2].weather[0].description = `overcast clouds`)
+            data.list[2].weather[0].main === `Clouds` &&
+            data.list[2].weather[0].description === `overcast clouds`
           ) {
             document.getElementById(`hr2-cloudy`).style.display = `block`;
-          } else if ((data.list[2].weather[0].main = `Clear`)) {
+          } else if (data.list[20].weather[0].main === `Clear`) {
             document.getElementById(`hr2-sunny`).style.display = `block`;
-          } else if ((data.list[2].weather[0].main = `Snow`)) {
+          } else if (data.list[20].weather[0].main === `Snow`) {
             document.getElementById(`hr2-snow`).style.display = `block`;
-          } else if ((data.list[2].weather[0].main = `Rain`)) {
+          } else if (data.list[20].weather[0].main === `Rain`) {
             document.getElementById(`hr2-rain`).style.display = `block`;
-          } else if ((data.list[2].weather[0].description = `few clouds`)) {
+          } else if (data.list[20].weather[0].description === `few clouds`) {
             document.getElementById(
               `hr2-partly-cloudy`
             ).style.display = `block`;
-          } else if ((data.list[2].weather[0].description = `broken clouds`)) {
+          } else if (data.list[20].weather[0].description === `broken clouds`) {
             document.getElementById(
               `hr2-partly-cloudy`
             ).style.display = `block`;
           } else if (
-            (data.list[2].weather[0].description = `scattered clouds`)
+            data.list[20].weather[0].description === `scattered clouds`
           ) {
+            document.getElementById(
+              `hr2-partly-cloudy`
+            ).style.display = `block`;
+          } else {
             document.getElementById(
               `hr2-partly-cloudy`
             ).style.display = `block`;
           }
           /////3 HOUR/////
           if (
-            (data.list[3].weather[0].main = `Clouds`) &&
-            (data.list[3].weather[0].description = `overcast clouds`)
+            data.list[30].weather[0].main === `Clouds` &&
+            data.list[30].weather[0].description === `overcast clouds`
           ) {
             document.getElementById(`hr3-cloudy`).style.display = `block`;
-          } else if ((data.list[3].weather[0].main = `Clear`)) {
+          } else if (data.list[30].weather[0].main === `Clear`) {
             document.getElementById(`hr3-sunny`).style.display = `block`;
-          } else if ((data.list[3].weather[0].main = `Snow`)) {
+          } else if (data.list[30].weather[0].main === `Snow`) {
             document.getElementById(`hr3-snow`).style.display = `block`;
-          } else if ((data.list[3].weather[0].main = `Rain`)) {
+          } else if (data.list[30].weather[0].main === `Rain`) {
             document.getElementById(`hr3-rain`).style.display = `block`;
-          } else if ((data.list[3].weather[0].description = `few clouds`)) {
+          } else if (data.list[30].weather[0].description === `few clouds`) {
             document.getElementById(
               `hr3-partly-cloudy`
             ).style.display = `block`;
-          } else if ((data.list[3].weather[0].description = `broken clouds`)) {
+          } else if (data.list[30].weather[0].description === `broken clouds`) {
             document.getElementById(
               `hr3-partly-cloudy`
             ).style.display = `block`;
           } else if (
-            (data.list[3].weather[0].description = `scattered clouds`)
+            data.list[30].weather[0].description === `scattered clouds`
           ) {
             document.getElementById(
               `hr3-partly-cloudy`
