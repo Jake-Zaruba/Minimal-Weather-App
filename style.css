@@ -36,7 +36,7 @@ body {
 
 .forecast-container {
   display: flex;
-  gap: 2.6rem;
+  gap: 2rem;
   margin-top: 3rem;
   justify-self: center;
   grid-column: 1;
@@ -57,6 +57,37 @@ body {
 .forecast-icon {
   width: 4.8rem;
   height: 4.8rem;
+}
+
+/* .icon-sunny,
+.icon-cloudy,
+.icon-partly-cloudy,
+.icon-raining,
+.icon-snowing {
+  display: none;
+} */
+
+#hr0-sunny,
+#hr0-cloudy,
+#hr0-rain,
+#hr0-snow,
+#hr0-partly-cloudy,
+#hr1-sunny,
+#hr1-cloudy,
+#hr1-rain,
+#hr1-snow,
+#hr1-partly-cloudy,
+#hr2-sunny,
+#hr2-cloudy,
+#hr2-rain,
+#hr2-snow,
+#hr2-partly-cloudy,
+#hr3-sunny,
+#hr3-cloudy,
+#hr3-rain,
+#hr3-snow,
+#hr3-partly-cloudy {
+  display: none;
 }
 
 .date-container {
