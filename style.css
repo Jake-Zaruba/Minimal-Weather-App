@@ -234,8 +234,7 @@ body {
   z-index: 1;
   justify-self: center;
   align-self: center;
-  /* backdrop-filter: blur(0.4rem); */
-  /* background-filter: blur(10rem); */
+  backdrop-filter: blur(0.4rem);
 }
 
 #forecast-box {
